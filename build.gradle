@@ -1,0 +1,33 @@
+plugins {
+    id 'scala'
+}
+
+group 'learning'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    jcenter()
+    mavenCentral()
+}
+
+dependencies {
+    compile group: 'com.typesafe.akka', name: 'akka-actor_2.11', version: '2.4.20'
+    compile 'org.scala-lang:scala-library:2.11.12'
+    compile group: 'io.monix', name: 'monix_2.12', version: '3.0.0-668a8b9'
+    compile group: 'com.fasterxml.jackson.module', name: 'jackson-module-scala_2.12', version: '2.9.5'
+    // https://mvnrepository.com/artifact/org.apache.camel/camel-core
+    compile group: 'org.apache.camel', name: 'camel-core', version: '3.0.0-M4'
+
+
+    testCompile 'junit:junit:4.12'
+    testCompile 'org.scalamock:scalamock_2.11:4.2.0'
+    testCompile 'org.scalatest:scalatest_2.11:3.0.4'
+    testRuntime 'org.scala-lang.modules:scala-xml_2.11:1.1.0'
+    // https://mvnrepository.com/artifact/org.scalamock/scalamock
+    testCompile group: 'org.scalamock', name: 'scalamock_2.11', version: '4.1.0'
+
+
+
+}
